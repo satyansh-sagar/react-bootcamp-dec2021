@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import Header from './bootstrap/Header';
 
 class App extends Component {
@@ -15,15 +15,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <h1>Hello Satyansh</h1> */}
-        <Header dark={this.state.Dark} className="mb-5">Satyansh Portfolio Genrator</Header>
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center">
-              <button className="btn btn-primary" onClick={this.toggleHeader}>Toggle Mode</button>
-            </div>
-          </div>
-        </div>
+        <Header dark={this.state.Dark} className="mb-5 justify-content-center">
+          <span>Satyansh Portfolio Genrator</span>
+          <button className="btn btn-sm btn-outline-primary ml-3 rounded-circle" onClick={this.toggleHeader}>
+            <i
+              className={"fa fa-" + (this.state.Dark ? "sun" : "moon") + "-o"}
+            ></i>
+            </button>
+          </Header>
       </div>
     );
   }
