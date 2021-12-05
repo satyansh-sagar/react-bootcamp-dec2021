@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Header from './bootstrap/Header';
+import Header from './Bootstrap/Header';
 
 class App extends Component {
   state = {
@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header dark={this.state.Dark} className="mb-5 justify-content-center">
+        <Header dark={this.state.Dark} className="Header">
           <span>Satyansh Portfolio Genrator</span>
           <button className="btn btn-sm btn-outline-primary ml-3 rounded-circle" onClick={this.toggleHeader}>
             <i
