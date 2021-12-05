@@ -15,8 +15,8 @@ const Form = ({FormData, onChange}) => {
     };
     return (
         <div className="Form">
-            {Object.keys(FormData).map(
-                fd => <FormGroup 
+            {Object.keys(FormData).map(fd => Object.keys(Desc).includes(fd) && (
+            <FormGroup 
                 key={fd} 
                 Label={Desc[fd][1]}
                 Type={Desc[fd][0]}
@@ -27,7 +27,7 @@ const Form = ({FormData, onChange}) => {
                 onChange={fd === "Fullname" ? () => {} : onChange}
                 readOnly={fd === "Fullname" ? true : undefined}
                 ></FormGroup> 
-                )}
+                ))}
         </div>
     )
 }
