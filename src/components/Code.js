@@ -1,4 +1,4 @@
-const code = () => {
+const Code = () => {
     return (
         <div className="Code">
             Code here...
@@ -6,4 +6,4 @@ const code = () => {
     )
 }
 
-export default code
+export default Code;

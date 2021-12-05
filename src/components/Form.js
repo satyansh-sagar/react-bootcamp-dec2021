@@ -1,4 +1,4 @@
-const form = () => {
+const Form = () => {
     return (
         <div className="Form">
             Form here...
@@ -6,4 +6,4 @@ const form = () => {
     )
 }
 
-export default form
+export default Form;
