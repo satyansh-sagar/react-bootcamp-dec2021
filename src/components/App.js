@@ -7,13 +7,13 @@ class App extends Component {
   state = {
     Dark: true,
     FormData: {
-      Fullname: "Value of fullname",
+      Firstname: "value fo firstname",
+      Lastname: "value of lastname",
+      // Fullname: "Value of fullname",
       Thumbnail: "value of thumbnail",
       URL: "value of url",
       Description: "value of description",
-      keywords: "value of keyword",
-      Firstname: "value fo firstname",
-      Lastname: "value of lastname",
+      keywords: "value of keyword", 
       Address: "value of address",
       Phone: "value of phone",
       Email: "value of email"
@@ -39,8 +39,12 @@ class App extends Component {
           </Header>
           <div className="container-fluid">
             <div className="row">
-              <div className="col-12 col-sm-6"><Form FormData={this.state.FormData}></Form></div>
-              <div className="col-12 col-sm-6"><Code {...this.state.FormData}></Code></div>
+              <div className="col-12 col-sm-6"><Form
+               FormData={{
+                 Fullname:`${this.state.FormData.Firstname} ${this.state.FormData.Lastname}`, 
+                 ...this.state.FormData}}
+                 ></Form></div>
+              <div className="col-12 col-sm-6"><Code {...this.state.FormData} Fullname={`${this.state.FormData.Firstname} ${this.state.FormData.Lastname}`}></Code></div>
             </div>
           </div>
       </div>
