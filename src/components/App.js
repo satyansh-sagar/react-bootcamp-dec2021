@@ -7,7 +7,7 @@ class App extends Component {
   state = {
     Dark: true,
     FormData: {
-      Firstname: "value fo firstname",
+      Firstname: "value of firstname",
       Lastname: "value of lastname",
       Thumbnail: "value of thumbnail",
       URL: "value of url",
@@ -25,7 +25,14 @@ class App extends Component {
     })
   };
 
-  handleChange = () => {};
+  handleChange = (e) => {
+    this.setState({
+      FormData:{
+        ...this.state.FormData,
+        [e.target.name]: e.target.value
+      }
+    })
+  };
 
   render() {
     return (
@@ -44,6 +51,7 @@ class App extends Component {
                FormData={{
                  Fullname:`${this.state.FormData.Firstname} ${this.state.FormData.Lastname}`, 
                  ...this.state.FormData}}
+                 onChange={this.handleChange}
                  ></Form></div>
               <div className="col-12 col-sm-6"><Code {...this.state.FormData} Fullname={`${this.state.FormData.Firstname} ${this.state.FormData.Lastname}`}></Code></div>
             </div>

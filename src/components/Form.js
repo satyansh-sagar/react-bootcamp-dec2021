@@ -19,9 +19,11 @@ const Form = ({FormData, onChange}) => {
                 fd => <FormGroup 
                 key={fd} 
                 Label={Desc[fd][1]}
-                Type={Desc[fd][0]}
+                Type={Desc[fd][1]}
+                Id={fd}
                 Desc={Desc[fd][2]}
-                onChange={onChange}
+                Value={FormData[fd]}
+                onChange={fd === "Fullname" ? () => {} : onChange}
                 ></FormGroup> 
                 )}
         </div>
