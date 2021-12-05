@@ -9,7 +9,6 @@ class App extends Component {
     FormData: {
       Firstname: "value fo firstname",
       Lastname: "value of lastname",
-      // Fullname: "Value of fullname",
       Thumbnail: "value of thumbnail",
       URL: "value of url",
       Description: "value of description",
@@ -25,6 +24,8 @@ class App extends Component {
       Dark: !this.state.Dark
     })
   };
+
+  handleChange = () => {};
 
   render() {
     return (
