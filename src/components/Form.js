@@ -25,6 +25,7 @@ const Form = ({FormData, onChange}) => {
                 Value={FormData[fd]}
                 Placeholder= {`Enter something for ${Desc[fd][1]}`}
                 onChange={fd === "Fullname" ? () => {} : onChange}
+                readOnly={fd === "Fullname" ? true : undefined}
                 ></FormGroup> 
                 )}
         </div>
