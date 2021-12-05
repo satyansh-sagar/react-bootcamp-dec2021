@@ -1,4 +1,5 @@
 import FormGroup from "./Bootstrap/FormGroup";
+import Experience from "./Form/Experience";
 
 const Form = ({FormData, onChange}) => {
     const Desc = {
@@ -28,6 +29,12 @@ const Form = ({FormData, onChange}) => {
                 readOnly={fd === "Fullname" ? true : undefined}
                 ></FormGroup> 
                 ))}
+                <h3>Experience</h3>
+                <Experience Experiences={FormData.Experience}></Experience>
+                <h3>Education</h3>
+                <h3>Skills</h3>
+                <h3>Interests</h3>
+                <h3>Awards</h3>
         </div>
     )
 }
