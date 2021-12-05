@@ -15,7 +15,15 @@ class App extends Component {
       keywords: "", 
       Address: "",
       Phone: "",
-      Email: ""
+      Email: "",
+      Experience: [],
+      Education: [],
+      Skills: {
+        Tools: [],
+        Workflow: []
+      },
+      Interests: [],
+      Awards: []
     }
   };
 
