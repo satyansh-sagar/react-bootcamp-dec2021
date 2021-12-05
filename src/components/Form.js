@@ -19,10 +19,11 @@ const Form = ({FormData, onChange}) => {
                 fd => <FormGroup 
                 key={fd} 
                 Label={Desc[fd][1]}
-                Type={Desc[fd][1]}
+                Type={Desc[fd][0]}
                 Id={fd}
                 Desc={Desc[fd][2]}
                 Value={FormData[fd]}
+                Placeholder= {`Enter something for ${Desc[fd][1]}`}
                 onChange={fd === "Fullname" ? () => {} : onChange}
                 ></FormGroup> 
                 )}
